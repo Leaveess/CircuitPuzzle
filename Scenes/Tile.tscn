@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://mjbvpqmpe3rt"]
+
+[ext_resource type="Script" uid="uid://b1bf5e44y5hc" path="res://Scripts/tile.gd" id="1_r4md0"]
+[ext_resource type="Texture2D" uid="uid://dnarytewkhptl" path="res://Textures/TileText.png" id="2_o0nvw"]
+[ext_resource type="Script" uid="uid://nvihlorqhn1f" path="res://Scripts/Overlap.gd" id="3_er2vu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bk6am"]
+size = Vector2(2, 29.999699)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r4md0"]
+size = Vector2(28, 27)
+
+[node name="Tile" type="Node2D" unique_id=2111458292]
+scale = Vector2(2, 2)
+script = ExtResource("1_r4md0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1960837016]
+texture_filter = 1
+texture = ExtResource("2_o0nvw")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Right" type="Area2D" parent="." unique_id=2106319782 node_paths=PackedStringArray("connectedSide") groups=["Input"]]
+position = Vector2(16, 0)
+script = ExtResource("3_er2vu")
+input = true
+connectedSide = NodePath("../Left")
+
+[node name="Output" type="CollisionShape2D" parent="Right" unique_id=495920564]
+shape = SubResource("RectangleShape2D_bk6am")
+
+[node name="Left" type="Area2D" parent="." unique_id=1971047364 node_paths=PackedStringArray("connectedSide") groups=["Output"]]
+position = Vector2(-16, 0)
+script = ExtResource("3_er2vu")
+output = true
+connectedSide = NodePath("../Right")
+
+[node name="Output" type="CollisionShape2D" parent="Left" unique_id=1022753988]
+shape = SubResource("RectangleShape2D_bk6am")
+
+[node name="Clickable" type="Area2D" parent="." unique_id=491706515]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=262408193]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_r4md0")
+
+[connection signal="input_event" from="Clickable" to="." method="_on_clickable_input_event"]

@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cq7un1k2m7pie"]
+
+[ext_resource type="PackedScene" uid="uid://mjbvpqmpe3rt" path="res://Scenes/Tile.tscn" id="1_ml4tp"]
+[ext_resource type="PackedScene" uid="uid://d4hhcgardedaw" path="res://Scenes/Spark.tscn" id="2_igt3p"]
+[ext_resource type="PackedScene" uid="uid://uetp60pndtty" path="res://Scenes/right_tile.tscn" id="3_37q8m"]
+
+[node name="Board" type="Node2D" unique_id=1807766528]
+
+[node name="Tile" parent="." unique_id=2111458292 instance=ExtResource("1_ml4tp")]
+position = Vector2(32, 32)
+
+[node name="Tile2" parent="." unique_id=1418631764 instance=ExtResource("1_ml4tp")]
+position = Vector2(96, 32)
+
+[node name="Spark" parent="." unique_id=2056782025 instance=ExtResource("2_igt3p")]
+position = Vector2(43, 32)
+scale = Vector2(2, 2)
+
+[node name="Tile4" parent="." unique_id=92708690 instance=ExtResource("1_ml4tp")]
+position = Vector2(32, 96)
+
+[node name="Tile5" parent="." unique_id=322746149 instance=ExtResource("1_ml4tp")]
+position = Vector2(96, 95)
+
+[node name="Tile6" parent="." unique_id=2102223650 instance=ExtResource("1_ml4tp")]
+position = Vector2(160, 95)
+
+[node name="Tile7" parent="." unique_id=1970160766 instance=ExtResource("1_ml4tp")]
+position = Vector2(32, 160)
+
+[node name="Tile8" parent="." unique_id=1202767554 instance=ExtResource("1_ml4tp")]
+position = Vector2(96, 159)
+
+[node name="RightTile" parent="." unique_id=1081986459 instance=ExtResource("3_37q8m")]
+position = Vector2(160, 32)
+scale = Vector2(2, 2)
+
+[node name="RightTile2" parent="." unique_id=669934602 instance=ExtResource("3_37q8m")]
+position = Vector2(160, 159)
+scale = Vector2(2, 2)
