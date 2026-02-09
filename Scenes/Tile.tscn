@@ -23,7 +23,6 @@ region_rect = Rect2(0, 0, 32, 32)
 [node name="Right" type="Area2D" parent="." unique_id=2106319782 node_paths=PackedStringArray("connectedSide") groups=["Input"]]
 position = Vector2(16, 0)
 script = ExtResource("3_er2vu")
-input = true
 connectedSide = NodePath("../Left")
 
 [node name="Output" type="CollisionShape2D" parent="Right" unique_id=495920564]
@@ -32,7 +31,6 @@ shape = SubResource("RectangleShape2D_bk6am")
 [node name="Left" type="Area2D" parent="." unique_id=1971047364 node_paths=PackedStringArray("connectedSide") groups=["Output"]]
 position = Vector2(-16, 0)
 script = ExtResource("3_er2vu")
-output = true
 connectedSide = NodePath("../Right")
 
 [node name="Output" type="CollisionShape2D" parent="Left" unique_id=1022753988]

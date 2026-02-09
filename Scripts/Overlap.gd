@@ -1,8 +1,5 @@
 extends Area2D
 
-@export var input = false
-@export var output = false
-
 @export var connectedSide: Area2D
 
 # Called when the node enters the scene tree for the first time.
