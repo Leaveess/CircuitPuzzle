@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://bjy8s8glc0xu5"]
+
+[ext_resource type="Texture2D" uid="uid://dm4o358cuadpb" path="res://Textures/Leftturn.png" id="1_55bqt"]
+[ext_resource type="Script" uid="uid://b1bf5e44y5hc" path="res://Scripts/tile.gd" id="1_c8lii"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c8lii"]
+size = Vector2(28, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kq0t1"]
+size = Vector2(31.999548, 0.66486835)
+
+[node name="LeftTile" type="Node2D" unique_id=857561391]
+script = ExtResource("1_c8lii")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1684187929]
+texture_filter = 1
+texture = ExtResource("1_55bqt")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Clickable" type="Area2D" parent="." unique_id=150214076]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=1210326720]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_c8lii")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=307400730]
+position = Vector2(0, 15)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1658980926]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_kq0t1")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=942073489]
+position = Vector2(15.000001, 7.450581e-09)
+rotation = -1.5761161
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=934782453]
+position = Vector2(-0.00532005, 0.58243465)
+shape = SubResource("RectangleShape2D_kq0t1")
+
+[connection signal="input_event" from="Clickable" to="." method="_on_clickable_input_event"]

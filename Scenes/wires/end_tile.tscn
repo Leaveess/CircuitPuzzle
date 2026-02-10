@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://cg05rv6e20a6r"]
+
+[ext_resource type="Texture2D" uid="uid://c20bi3ikl870q" path="res://Textures/Endtile.png" id="1_ediky"]
+[ext_resource type="Script" uid="uid://b8iko2l8yb4w0" path="res://Scripts/endtile.gd" id="2_lu42d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lu42d"]
+size = Vector2(28, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mnfkv"]
+size = Vector2(31.999548, 0.66486835)
+
+[node name="EndTile" type="Node2D" unique_id=933047520]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1708094956]
+texture_filter = 1
+texture = ExtResource("1_ediky")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Clickable" type="Area2D" parent="." unique_id=892487988]
+script = ExtResource("2_lu42d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickable" unique_id=900532894]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_lu42d")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2074435310]
+position = Vector2(0, 15)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1127313421]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_mnfkv")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1787163587]
+position = Vector2(15.000001, 7.450581e-09)
+rotation = -1.5761161
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1165326534]
+position = Vector2(-0.00532005, 0.58243465)
+shape = SubResource("RectangleShape2D_mnfkv")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=878893359]
+position = Vector2(-15.000001, 0)
+rotation = 1.5676419
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=977791880]
+position = Vector2(-0.00532005, 0.58243465)
+shape = SubResource("RectangleShape2D_mnfkv")
