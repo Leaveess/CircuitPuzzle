@@ -9,7 +9,7 @@ size = Vector2(28, 27)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iof5j"]
 size = Vector2(32, 1)
 
-[node name="Tile" type="Node2D" unique_id=2111458292]
+[node name="Tile" type="Node2D" unique_id=2111458292 groups=["tiles"]]
 script = ExtResource("1_r4md0")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1960837016]
@@ -27,16 +27,14 @@ shape = SubResource("RectangleShape2D_r4md0")
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1338480966]
 position = Vector2(0, -16)
 collision_layer = 2
-collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1168486446]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_iof5j")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1712077333]
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1712077333 groups=["tiles"]]
 position = Vector2(0, 15)
 collision_layer = 2
-collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=629088586]
 position = Vector2(0, 0.5)

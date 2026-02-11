@@ -4,47 +4,102 @@
 [ext_resource type="PackedScene" uid="uid://b4b6dtko077n0" path="res://Scenes/SparkCharacter.tscn" id="2_igt3p"]
 [ext_resource type="PackedScene" uid="uid://uetp60pndtty" path="res://Scenes/wires/right_tile.tscn" id="3_37q8m"]
 [ext_resource type="PackedScene" uid="uid://bjy8s8glc0xu5" path="res://Scenes/wires/left_tile.tscn" id="4_pc0oo"]
+[ext_resource type="PackedScene" uid="uid://bm0uuurjnwnf6" path="res://Scenes/Barrier.tscn" id="5_ekcd8"]
 
 [node name="Board" type="Node2D" unique_id=1807766528]
 
 [node name="Tile" parent="." unique_id=2111458292 instance=ExtResource("1_ml4tp")]
-position = Vector2(16, 16)
+position = Vector2(432, 240)
 
 [node name="Tile2" parent="." unique_id=1990432416 instance=ExtResource("1_ml4tp")]
-position = Vector2(48, 16)
+position = Vector2(464, 240)
 
 [node name="Tile3" parent="." unique_id=1203254137 instance=ExtResource("1_ml4tp")]
-position = Vector2(80, 16)
+position = Vector2(496, 240)
 
 [node name="RightTile" parent="." unique_id=1081986459 instance=ExtResource("3_37q8m")]
-position = Vector2(112, 16)
+position = Vector2(528, 240)
 
 [node name="RightTile2" parent="." unique_id=1415137341 instance=ExtResource("3_37q8m")]
-position = Vector2(48, 48)
+position = Vector2(464, 272)
 
 [node name="Tile4" parent="." unique_id=2062383153 instance=ExtResource("1_ml4tp")]
-position = Vector2(112, 48)
+position = Vector2(528, 272)
 
 [node name="RightTile3" parent="." unique_id=42193034 instance=ExtResource("3_37q8m")]
-position = Vector2(112, 80)
+position = Vector2(528, 304)
 
 [node name="Tile5" parent="." unique_id=664040603 instance=ExtResource("1_ml4tp")]
-position = Vector2(80, 48)
+position = Vector2(496, 272)
 
 [node name="RightTile4" parent="." unique_id=227141580 instance=ExtResource("3_37q8m")]
-position = Vector2(48, 80)
+position = Vector2(464, 304)
 
 [node name="Tile6" parent="." unique_id=242945923 instance=ExtResource("1_ml4tp")]
-position = Vector2(80, 80)
+position = Vector2(496, 304)
 
 [node name="Tile7" parent="." unique_id=79256166 instance=ExtResource("1_ml4tp")]
-position = Vector2(16, 48)
+position = Vector2(432, 272)
 
 [node name="RightTile5" parent="." unique_id=1276204040 instance=ExtResource("3_37q8m")]
-position = Vector2(16, 80)
+position = Vector2(432, 304)
 
 [node name="LeftTile" parent="." unique_id=857561391 instance=ExtResource("4_pc0oo")]
-position = Vector2(16, 112)
+position = Vector2(432, 336)
 
 [node name="CharacterBody2D" parent="." unique_id=1504984075 instance=ExtResource("2_igt3p")]
-position = Vector2(16, 16)
+position = Vector2(432, 240)
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1775576725]
+position = Vector2(-32, -32)
+
+[node name="Barrier" parent="Node2D" unique_id=1361264251 instance=ExtResource("5_ekcd8")]
+position = Vector2(432, 368)
+
+[node name="Barrier2" parent="Node2D" unique_id=1693254442 instance=ExtResource("5_ekcd8")]
+position = Vector2(432, 336)
+
+[node name="Barrier3" parent="Node2D" unique_id=1617144795 instance=ExtResource("5_ekcd8")]
+position = Vector2(432, 304)
+
+[node name="Barrier4" parent="Node2D" unique_id=1432460078 instance=ExtResource("5_ekcd8")]
+position = Vector2(432, 272)
+
+[node name="Barrier5" parent="Node2D" unique_id=2082368397 instance=ExtResource("5_ekcd8")]
+position = Vector2(432, 240)
+
+[node name="Barrier6" parent="Node2D" unique_id=99035543 instance=ExtResource("5_ekcd8")]
+position = Vector2(464, 240)
+
+[node name="Barrier7" parent="Node2D" unique_id=1244284006 instance=ExtResource("5_ekcd8")]
+position = Vector2(496, 240)
+
+[node name="Barrier8" parent="Node2D" unique_id=1575706307 instance=ExtResource("5_ekcd8")]
+position = Vector2(528, 240)
+
+[node name="Barrier9" parent="Node2D" unique_id=1765179295 instance=ExtResource("5_ekcd8")]
+position = Vector2(560, 240)
+
+[node name="Barrier10" parent="Node2D" unique_id=1558161742 instance=ExtResource("5_ekcd8")]
+position = Vector2(592, 240)
+
+[node name="Barrier11" parent="Node2D" unique_id=414183700 instance=ExtResource("5_ekcd8")]
+position = Vector2(592, 272)
+
+[node name="Barrier12" parent="Node2D" unique_id=1383798962 instance=ExtResource("5_ekcd8")]
+position = Vector2(592, 304)
+
+[node name="Barrier13" parent="Node2D" unique_id=1019809879 instance=ExtResource("5_ekcd8")]
+position = Vector2(592, 336)
+
+[node name="Barrier14" parent="Node2D" unique_id=2132333023 instance=ExtResource("5_ekcd8")]
+position = Vector2(496, 368)
+
+[node name="Barrier15" parent="Node2D" unique_id=1407720492 instance=ExtResource("5_ekcd8")]
+position = Vector2(528, 368)
+
+[node name="Barrier16" parent="Node2D" unique_id=907715901 instance=ExtResource("5_ekcd8")]
+position = Vector2(560, 368)
+
+[node name="Barrier17" parent="Node2D" unique_id=2005223347 instance=ExtResource("5_ekcd8")]
+position = Vector2(592, 368)

@@ -11,14 +11,19 @@ config_version=5
 [application]
 
 config/name="CircuitGame"
-run/main_scene="uid://cq7un1k2m7pie"
+run/main_scene="uid://bx6pgbi2g64gs"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*uid://dfy6e6xeafks2"
 
 [global_group]
 
 Output=""
 Input=""
+tiles=""
 
 [input]
 

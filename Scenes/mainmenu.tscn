@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://bx6pgbi2g64gs"]
+
+[ext_resource type="Script" uid="uid://tv5tvngv1s3o" path="res://Scripts/mainmenu.gd" id="1_pposm"]
+
+[node name="Mainmenu" type="Node2D" unique_id=1051632200]
+script = ExtResource("1_pposm")
+
+[node name="buttonManager" type="Control" parent="." unique_id=1535768652]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Start" type="Button" parent="buttonManager" unique_id=1077215257]
+layout_mode = 0
+offset_left = 464.0
+offset_top = 264.0
+offset_right = 656.0
+offset_bottom = 320.0
+text = "Start"
+
+[node name="Options" type="Button" parent="buttonManager" unique_id=1678728135]
+layout_mode = 0
+offset_left = 464.0
+offset_top = 328.0
+offset_right = 656.0
+offset_bottom = 384.0
+text = "Options"
+
+[node name="Quit" type="Button" parent="buttonManager" unique_id=621875085]
+layout_mode = 0
+offset_left = 464.0
+offset_top = 392.0
+offset_right = 656.0
+offset_bottom = 448.0
+text = "Quit"
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=666908126]
+offset_left = 504.0
+offset_top = 192.0
+offset_right = 624.0
+offset_bottom = 232.0
+text = "CircuitChamp"
+editable = false
+
+[connection signal="pressed" from="buttonManager/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="buttonManager/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="buttonManager/Quit" to="." method="_on_quit_pressed"]

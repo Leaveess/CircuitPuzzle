@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dm8cwfrotxh5n"]
+
+[ext_resource type="Script" uid="uid://cnuspiau14g2f" path="res://Scripts/UI.gd" id="1_80pfe"]
+
+[node name="LevelUi" type="Control" unique_id=1055713849]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1744820219]
+script = ExtResource("1_80pfe")
+
+[node name="MarginContainer" type="MarginContainer" parent="UI" unique_id=366628504]
+offset_right = 496.0
+offset_bottom = 120.0
+
+[node name="Timerlabel" type="Label" parent="UI/MarginContainer" unique_id=1202754615]
+layout_mode = 2

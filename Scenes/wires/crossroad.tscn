@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://b16ubohql5hn2"]
+
+[ext_resource type="Texture2D" uid="uid://6r7121bu3wap" path="res://Textures/Crossroad.png" id="1_8svuk"]
+[ext_resource type="Script" uid="uid://b1bf5e44y5hc" path="res://Scripts/tile.gd" id="1_kl88j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8svuk"]
+size = Vector2(28, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kl88j"]
+size = Vector2(31.999548, 0.66486835)
+
+[node name="crossroad" type="Node2D" unique_id=1704006048 groups=["tiles"]]
+script = ExtResource("1_kl88j")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1351707818]
+texture_filter = 1
+texture = ExtResource("1_8svuk")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Clickable" type="Area2D" parent="Sprite2D" unique_id=768558372 groups=["tiles"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Clickable" unique_id=1646932917]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_8svuk")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Sprite2D" unique_id=1434008406]
+position = Vector2(15.000001, 7.450581e-09)
+rotation = -1.5761161
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D2" unique_id=848695293]
+position = Vector2(-0.00532005, 0.58243465)
+shape = SubResource("RectangleShape2D_kl88j")
+
+[connection signal="input_event" from="Sprite2D/Clickable" to="." method="_on_clickable_input_event"]

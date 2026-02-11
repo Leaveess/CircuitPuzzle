@@ -9,7 +9,7 @@ size = Vector2(28, 27)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1ait"]
 size = Vector2(31.999548, 0.66486835)
 
-[node name="RightTile" type="Node2D" unique_id=1081986459]
+[node name="RightTile" type="Node2D" unique_id=1081986459 groups=["tiles"]]
 script = ExtResource("1_qrevp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1341990366]

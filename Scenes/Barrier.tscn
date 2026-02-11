@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bm0uuurjnwnf6"]
+
+[ext_resource type="Texture2D" uid="uid://dffb7k4b857eo" path="res://Textures/blocker.png" id="1_v183y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7cxq7"]
+size = Vector2(32, 32)
+
+[node name="Barrier" type="Node2D" unique_id=1361264251]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1739676685]
+texture_filter = 1
+texture = ExtResource("1_v183y")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2114124388]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1952892250]
+shape = SubResource("RectangleShape2D_7cxq7")
