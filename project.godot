@@ -24,6 +24,7 @@ GameManager="*uid://dfy6e6xeafks2"
 Output=""
 Input=""
 tiles=""
+player=""
 
 [input]
 

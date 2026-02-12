@@ -9,15 +9,11 @@ signal levelComplete
 signal levelFail
 signal timerUpdate(timer)
 
-func _ready():
-	randomize()
 
 func levelStart(levelName: String, startTime: float):
 	CurrentlevelName = levelName
 	timer = startTime
 	levelPlaying = true
-	
-	#rotateRandom()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float):
@@ -34,10 +30,15 @@ func completedLevel():
 	if not levelPlaying:
 		return
 	levelPlaying = false
+	
+	completedLevels[CurrentlevelName] = true
 	emit_signal("levelComplete")
+	
+	get_tree().change_scene_to_file("res://Scenes/mainmenu.tscn")
+	print(completedLevels)
 	
 func failLevel():
 	levelPlaying = false
 	emit_signal("levelFail")
-
-#func rotateRandom():
+	
+	get_tree().reload_current_scene()

@@ -54,4 +54,4 @@ collision_mask = 0
 position = Vector2(-0.00532005, 0.58243465)
 shape = SubResource("RectangleShape2D_mnfkv")
 
-[connection signal="area_entered" from="Clickable" to="Clickable" method="_on_area_entered"]
+[connection signal="body_entered" from="Clickable" to="Clickable" method="_on_body_entered"]

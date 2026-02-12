@@ -9,6 +9,9 @@ size = Vector2(28, 27)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iof5j"]
 size = Vector2(32, 1)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vsccb"]
+size = Vector2(32, 32)
+
 [node name="Tile" type="Node2D" unique_id=2111458292 groups=["tiles"]]
 script = ExtResource("1_r4md0")
 
@@ -40,4 +43,12 @@ collision_layer = 2
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_iof5j")
 
+[node name="Area2D" type="Area2D" parent="." unique_id=626674582 groups=["tiles"]]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=946411715]
+shape = SubResource("RectangleShape2D_vsccb")
+
 [connection signal="input_event" from="Clickable" to="." method="_on_clickable_input_event"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
